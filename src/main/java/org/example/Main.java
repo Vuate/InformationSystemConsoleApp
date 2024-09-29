@@ -18,5 +18,7 @@ public class Main {
         dbOperations.insertInfo(name,surname,mail,phone);
         dbOperations.selectInfo();
         dbOperations.deleteInfo(id);
+
+        System.out.println("Kadir was here");
     }
 }
