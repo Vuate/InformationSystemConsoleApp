@@ -15,5 +15,7 @@ public class Main {
 
         DbOperations dbOperations = new DbOperations();
         dbOperations.insertInfo(name,surname,mail,phone);
+
+        dbOperations.selectInfo();
     }
 }

@@ -16,4 +16,15 @@ public class DbOperations {
         ps.setString(4, phone);
         ps.executeUpdate();
     }
+
+    public void selectInfo() throws SQLException {
+
+        Connection connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/information_system?user=root&&password=1234");
+        Statement st = connection.createStatement();
+        ResultSet rs = st.executeQuery("SELECT * FROM user");
+
+        while (rs.next()) {
+            System.out.println("*ID: " + rs.getInt("id") + " *NAME: " + rs.getString("name") + " *SURNAME: " + rs.getString("surname") + " *MAIL: " + rs.getString("mail") + " *NUMBER: " + rs.getString("phone_number"));
+        }
+    }
 }
